@@ -1,0 +1,132 @@
+/* styles.css */
+
+/* Estilo global para telas pequenas */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5px;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 4px; /* Reduzido */
+  box-sizing: border-box;
+}
+
+#score-display, #record-display {
+  font-size: 14px; /* Reduzido */
+  margin: 0 5px; /* Reduzido */
+  color: #333;
+}
+
+h1 {
+  color: #333;
+  font-size: 20px; /* Reduzido */
+  margin-top: 5px;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.sign-container {
+  margin-bottom: 5px;
+}
+
+#sign-img {
+  width: 60px; /* Reduzido */
+  height: 60px; /* Reduzido */
+  margin-top: 4px;
+  border: 2px solid #333;
+  border-radius: 5px;
+}
+
+#feedback-message {
+  font-size: 12px; /* Reduzido */
+  font-weight: bold;
+  color: #333;
+  margin-top: 4px; /* Reduzido */
+}
+
+/* Configurações do teclado virtual */
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px; /* Reduzido */
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 4px; /* Menor espaçamento entre as teclas */
+}
+
+.letter {
+  width: 28px; /* Reduzido para caber no layout de 320px */
+  height: 28px;
+  background-color: #4CAF50;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px; /* Ajustado */
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.letter:hover {
+  background-color: #45a049;
+}
+
+#controls {
+  margin-top: 10px; /* Reduzido */
+}
+
+button {
+  padding: 6px 12px; /* Reduzido */
+  font-size: 12px; /* Reduzido */
+  margin: 3px;
+  cursor: pointer;
+}
+
+/* Estilos específicos para telas de 320px de largura */
+@media (max-width: 320px) {
+  #game-container {
+    width: 90%;
+  }
+
+  #header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #score-display, #record-display {
+    font-size: 12px;
+    margin: 2px;
+  }
+
+  .letter {
+    width: 26px; /* Ainda mais reduzido para melhor encaixar na tela */
+    height: 26px;
+    font-size: 14px;
+  }
+
+  #sign-img {
+    width: 50px;
+    height: 50px;
+  }
+}
